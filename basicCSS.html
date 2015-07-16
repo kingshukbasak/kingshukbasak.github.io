@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="basicCSS.css" rel="stylesheet" type="text/css">
+
+    <title></title>
+</head>
+
+<body>
+  <div style="position:absolute; top:50px; left:80px;">
+
+    <div>
+        <ul>
+            <li  onclick="change('tab1')" id="tab1">
+                News
+            </li>
+
+            <li  onclick="change('tab2')" id="tab2">
+                Subscribe
+            </li>
+        </ul>
+    </div>
+
+    <div class="maindiv1" id="maindiv1">
+        <div class="innerdiv">
+            <h2>Welcome</h2>
+
+            <p>Simple and effective AngularJS binding for
+            FusionCharts java script charting library.Simple
+            and effective AngularJS bindings for FusonCharts
+            JavaScript Charting Library.</p>
+
+            <p style="color:#3399FF;">AngularJS bindings for FusonCharts
+            JavaScript Charting Library.</p>
+        </div>
+
+        <div class="innerdiv">
+        <h2>Latest News</h2><img src="image.jpg"></div>
+
+        <div id='learn'>
+            <p style="color:white;">LEARN
+            MORE</p>
+        </div>
+    </div>
+    <div class="maindiv2" id="maindiv2">
+        <div class=innerdiv1 >
+         <form action="" onsubmit="fetch()" id="form1">
+            <div class=innerdiv1Inside id="innerleft">
+                <h2>Subscription Form</h2>
+                <table width="270" height="200" >
+                        <tr><td>Name</td><td><input type="text" id="name" value=""></td></tr>
+                        <tr><td>Email</td><td><input type="text" id="email" value=""></td></tr>
+                        <tr><td>Sex</td><td><input type="radio" id="sex" value="male" name="sex">Male<input type="radio" name="sex" id="sex" value="female">Female</td></tr>
+                        <tr><td>Interest</td><td><input type="checkbox" name="interest" value="football">Football<input type="checkbox" name="interest" value="movie">Movie<input type="checkbox" name="interest" value="reading">Reading</td></tr>
+                </table>
+            </div>
+            <div class=innerdiv1Inside id="innerright">
+                
+                <table>
+                        
+                        <tr><td>Country<td><td><select id="country" name="country" value="">
+                                              <option disabled selected></option>
+                                              <option value="india">india</option>
+                                              <option value="pakistan">pakistan</option>
+                                              <option value="nepal">nepal</option>
+                                              <option value="bhutan">bhutan</option>
+                                            </select><td><tr>
+                        <tr><td><p id="paraAddress" >Address</p><td><td><input type="text" id="address" name="address" value=""><td><tr>
+                </table>
+            </div>
+            
+                <button type="submit" class=subscribe >Subscribe</button>
+                <button type="reset" class=reset>Reset</button>
+            
+        </form>
+        </div>
+    </div>
+  </div>
+  <script src="basicCSS.js">
+    
+</script>
+</body>
+</html>
