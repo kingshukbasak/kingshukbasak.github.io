@@ -36,11 +36,24 @@ function fetch() {
     var inputElements = document.getElementsByName('interest');
     for (var i = 0; inputElements[i]; ++i) {
         if (inputElements[i].checked) {
-            interest = interest + inputElements[i].value + " ";
+            interest = interest + inputElements[i].value + ",";
         }
     }
     var e = document.getElementById('country').value;
     var f = document.getElementById('address').value;
+    var object={};
+    object.name=a;
+    object.email=b;
+    object.sex=sex;
+    object.interest=interest;
+    object.country=e;
+    object.address=f;
+    
+    JSON.stringify(object);
+
+    console.log(object);
+
+    
     console.log("{");
     console.log('"name":"' + a + '",');
     console.log('"email":"' + b + '",');
