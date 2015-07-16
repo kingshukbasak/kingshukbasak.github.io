@@ -4,20 +4,20 @@ function change(x) {
     if (x == 'tab1') {
         document.getElementById("maindiv1").style.visibility = 'visible';
         document.getElementById("maindiv2").style.visibility = 'hidden';
-        a.style.color = '#8197B6';
-        b.style.color = 'black';
+        a.style.color = '#39F';
+        b.style.color = '#878787';
         a.style.backgroundColor = '#E4F0FE';
         b.style.backgroundColor = 'white';
-        b.style.borderBottom = '1px solid #DDE6F7';
+        b.style.borderBottom = '1px solid #39F';
         a.style.borderBottom = '1px solid #E4F0FE ';
     } else {
         document.getElementById("maindiv2").style.visibility = 'visible';
         document.getElementById("maindiv1").style.visibility = 'hidden';
         a.style.backgroundColor = 'white';
         b.style.backgroundColor = '#E4F0FE';
-        a.style.color = "black";
-        b.style.color = "#8197B6";
-        a.style.borderBottom = '1px solid #DDE6F7';
+        a.style.color = "#878787";
+        b.style.color = "#39F";
+        a.style.borderBottom = '1px solid #39F';
         b.style.borderBottom = '1px solid #E4F0FE ';
     }
 }
@@ -53,7 +53,7 @@ function fetch() {
 
     console.log(object);
 
-    
+
     console.log("{");
     console.log('"name":"' + a + '",');
     console.log('"email":"' + b + '",');
