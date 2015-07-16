@@ -36,7 +36,7 @@ function fetch() {
     var inputElements = document.getElementsByName('interest');
     for (var i = 0; inputElements[i]; ++i) {
         if (inputElements[i].checked) {
-            interest = interest + inputElements[i].value + ",";
+            interest = interest + inputElements[i].value + " ";
         }
     }
     var e = document.getElementById('country').value;
