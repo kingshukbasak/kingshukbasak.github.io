@@ -73,20 +73,20 @@ input[type='text']
     height: 30px;
     margin-left: 10px;
     background-color: #F3F3F3;
-    border: 1px solid #EDEDED;
+    border: 1px solid #D6D6C2
     border-radius:3px;
 }
 input[type="checkbox"]
 {
     margin: 1px 8px 1px 12px;
     background-color: white;
-    border: 1px solid #EDEDED;
+    border: 1px solid #D6D6C2;
 }
 input[type="radio"]
 {
     margin: 1px 12px 1px 12px;
     background-color: white;
-    border: 1px solid #EDEDED;
+    border: 1px solid #D6D6C2;
     border-radius:3px;
 }
 #address{
