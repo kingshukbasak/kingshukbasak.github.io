@@ -32,18 +32,35 @@ function change(x)
     }
 function fetch()
 {
+    var sex,interest="";
     var a=document.getElementById("name").value;
     var b=document.getElementById("email").value;
-    var c = document.getElementsByName('sex').value;
-    var d=document.getElementsByName('interest').value;
+    var c = document.getElementsByName('sex');
+    for (var i =c.length; i--;) 
+    {
+    if (c[i].checked) {
+        sex= c[i].value;
+        break;
+                        }
+    }
+    var inputElements = document.getElementsByName('interest');
+    for(var i=0; inputElements[i]; ++i)
+        {
+               if(inputElements[i].checked)
+           {
+          
+               interest= interest+inputElements[i].value+",";
+               
+           }
+        }
     var e=document.getElementById('country').value;
     var f=document.getElementById('address').value;
     console.log("{");
-    console.log('"name":"'+a+'"');
-    console.log('"email":"'+b+'"');
-    console.log('"sex":"'+c+'"');
-    console.log('"interest":"'+d+'"');
-    console.log('"country":"'+e+'"');
+    console.log('"name":"'+a+'",');
+    console.log('"email":"'+b+'",');
+    console.log('"sex":"'+sex+'",');
+    console.log('"interest":"'+interest+'",');
+    console.log('"country":"'+e+'",');
     console.log('"address":"'+f+'"');
     console.log("}");
 }
