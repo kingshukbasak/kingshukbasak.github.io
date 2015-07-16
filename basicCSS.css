@@ -2,10 +2,10 @@ li {
     position:relative;
     margin:2px;
     border-radius:3px 3px 1px 1px;
-    border-color:#39F #39F #E4F0FE;
+    border-color:#39F #39F #E4F0FE #39F ;
     border-width:1px;
     border-style:solid;
-    color:#8197B6;
+    color:#39F;
     background-color:#E4F0FE;
     padding-top:10px;
     padding-right:50px;
@@ -39,7 +39,7 @@ body {
 
 .maindiv2 {
     visibility:hidden;
-    color:#6e6e6e
+    color:#6e6e6e;
 }
 
 .innerdiv,.innerdiv1 {
@@ -66,7 +66,8 @@ body {
 
 #tab2 {
     background-color:#fff;
-    color:#000
+    color: #878787;
+    border-color: #39F;
 }
 
 input[type='text'] {
