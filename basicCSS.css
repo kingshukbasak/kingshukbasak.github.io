@@ -3,7 +3,7 @@ li {
     position: relative;
     margin: 2px;
     border-radius:3px 3px 1px 1px;
-    border-color:#DDE6F7 #DDE6F7 #E4F0FE  #DDE6F7;
+    border-color:#3399FF #3399FF #E4F0FE  #3399FF;
     border-width:1px;
     border-style: solid;
     color: #8197B6;
@@ -26,7 +26,7 @@ body{
     background-color:#E4F0FE;
     border-radius:10px;
     position:absolute;
-    border:1px solid #DDE6F7;
+    border:1px solid #3399FF;
     top:66px;
     width:840px;
     height:320px;
