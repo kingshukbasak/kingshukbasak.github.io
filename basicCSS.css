@@ -128,12 +128,17 @@ input[type="radio"] {
     border:1px solid #3C3;
     background-color:#3C3;
     padding:10px 30px;
-    border-radius:3px 3px 3px 3px;
+    border-radius:3px ;
     color:#fff;
-    font-size:20px;
-    font-weight:700;
+    font-size:16px;
+    font-weight:600;
     cursor:pointer;
     cursor:hand
+
+}
+.subscribe:hover,.reset:hover ,#learn:hover{
+    background-color: green;
+
 }
 
 .reset {
@@ -142,14 +147,19 @@ input[type="radio"] {
 
 #learn {
     background-color:#3C3;
-    border-radius:5px;
+    border-radius:3px;
     height:35px;
     width:120px;
     position:absolute;
     top:320px;
     left:130px;
     clear:left;
-    padding:1px 5px 10px 10px
+    font-size: 16px;
+    font-weight: 600;
+    padding:1px 5px 10px 10px;
+    cursor:pointer;
+    cursor:hand;
+
 }
 
 h2 {
