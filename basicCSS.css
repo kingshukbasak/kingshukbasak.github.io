@@ -99,19 +99,16 @@ input[type="radio"] {
     border-radius:3px
 }
 
-
+.innerdiv1Inside {
+    position:relative;
+    float:left
+}
 
 #innerleft {
-    position: absolute;
-    top:43px;
-    left: 77px;
     margin-right:10px
 }
 
 #innerright {
-    position: absolute;
-    top: 44px;
-    left:444px;
     margin-left:10px;
     padding-top:74px
 }
