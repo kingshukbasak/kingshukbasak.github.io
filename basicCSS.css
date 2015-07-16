@@ -1,12 +1,11 @@
 li {
-    
-    position: relative;
-    margin: 2px;
+    position:relative;
+    margin:2px;
     border-radius:3px 3px 1px 1px;
-    border-color:#3399FF #3399FF #E4F0FE  #3399FF;
+    border-color:#39F #39F #E4F0FE;
     border-width:1px;
-    border-style: solid;
-    color: #8197B6;
+    border-style:solid;
+    color:#8197B6;
     background-color:#E4F0FE;
     padding-top:10px;
     padding-right:50px;
@@ -14,132 +13,131 @@ li {
     padding-left:50px;
     top:9px;
     left:30px;
-    float: left;
+    float:left;
     z-index:1;
-    cursor: pointer; cursor: hand;
-    list-style: none;
+    cursor:pointer;
+    cursor:hand;
+    list-style:none
 }
-body{
-    font-family: "Open Sans ";
+
+body {
+    font-family:"Open Sans "
 }
+
 .maindiv1,.maindiv2 {
     background-color:#E4F0FE;
     border-radius:10px;
     position:absolute;
-    border:1px solid #3399FF;
+    border:1px solid #39F;
     top:66px;
     width:840px;
     height:320px;
     padding:20px 10px 50px 20px;
     left:50px;
-    z-index:-1;
-
+    z-index:-1
 }
 
-.maindiv2{
-    visibility: hidden;
-    color: #6e6e6e;
-
+.maindiv2 {
+    visibility:hidden;
+    color:#6e6e6e
 }
 
-.innerdiv, .innerdiv1 {
+.innerdiv,.innerdiv1 {
     border-radius:10px;
     background-color:#FFF;
-    border:1px solid #3399FF;
-    
+    border:1px solid #39F;
     width:330px;
     height:230px;
     margin:10px;
     float:left;
-    padding:30px 30px 50px;
+    padding:30px 30px 50px
 }
-.innerdiv1{
+
+.innerdiv1 {
     width:743px;
-    padding-top: 1px;
-    padding-left: 29px;
-    padding-bottom: 79px;
-
-}
-#paraAddress{
-    padding-bottom: 40px;
-}
-#tab2{
-    background-color: white;
-    color: black;
-}
-input[type='text']
-{
-    width: 270px;
-    height: 30px;
-    margin-left: 10px;
-    background-color: #F3F3F3;
-    border: 1px solid #D6D6C2;
-    border-radius:3px;
-}
-input[type="checkbox"]
-{
-    margin: 1px 8px 1px 12px;
-    background-color: white;
-    border: 1px solid #EDEDED;
-}
-input[type="radio"]
-{
-    margin: 1px 12px 1px 12px;
-    background-color: white;
-    border: 1px solid #EDEDED;
-    border-radius:3px;
-}
-#address{
-    width: 270px;
-    height: 65px;
-    margin-top: 20px;
-    border-radius:3px;
-}
-.innerdiv1Inside{
-    position: relative;
-    float:left;
-
+    padding-top:1px;
+    padding-left:29px;
+    padding-bottom:79px
 }
 
-#innerleft{
-    margin-right: 10px;
-
-
-
+#paraAddress {
+    padding-bottom:40px
 }
 
-#innerright{
-    margin-left: 10px;
-    padding-top: 74px;
+#tab2 {
+    background-color:#fff;
+    color:#000
 }
-#country{
-    width: 274px;
-    height: 30px;
-    margin-left: 10px;
-    background-color: #F3F3F3;
-    border: 1px solid #D6D6C2;
 
+input[type='text'] {
+    width:270px;
+    height:30px;
+    margin-left:10px;
+    background-color:#F3F3F3;
+    border:1px solid #D6D6C2;
+    border-radius:3px
 }
-.subscribe, .reset{
-    position: absolute;
+
+input[type="checkbox"] {
+    margin:1px 8px 1px 12px;
+    background-color:#fff;
+    border:1px solid #EDEDED
+}
+
+input[type="radio"] {
+    margin:1px 12px;
+    background-color:#fff;
+    border:1px solid #EDEDED;
+    border-radius:3px
+}
+
+#address {
+    width:270px;
+    height:65px;
+    margin-top:20px;
+    border-radius:3px
+}
+
+.innerdiv1Inside {
+    position:relative;
+    float:left
+}
+
+#innerleft {
+    margin-right:10px
+}
+
+#innerright {
+    margin-left:10px;
+    padding-top:74px
+}
+
+#country {
+    width:274px;
+    height:30px;
+    margin-left:10px;
+    background-color:#F3F3F3;
+    border:1px solid #D6D6C2
+}
+
+.subscribe,.reset {
+    position:absolute;
     top:318px;
-    left: 642px;
+    left:642px;
     border:1px solid #3C3;
-    background-color: #3C3;
-    padding: 10px 30px 10px 30px;
-     border-radius:3px 3px 3px 3px;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-     cursor: pointer; cursor: hand;
+    background-color:#3C3;
+    padding:10px 30px;
+    border-radius:3px 3px 3px 3px;
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+    cursor:hand
 }
 
-.reset{
-    left:480px;
-
+.reset {
+    left:480px
 }
-
-
 
 #learn {
     background-color:#3C3;
@@ -155,5 +153,4 @@ input[type="radio"]
 
 h2 {
     color:#878787
-
 }
