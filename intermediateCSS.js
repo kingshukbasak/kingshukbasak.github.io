@@ -29,8 +29,9 @@ function check(input)
     var x=input.value;
     console.log(len);
 
+    
 
-    if(len==2)
+    if(len==3)
     {
         console.log(x);
         if(x!='+91')
@@ -39,13 +40,24 @@ function check(input)
             input.value="";
         }
     }
-    if(len==3)
+    if(len==4)
     {
-        if(x.charAt(3)!=9||x.charAt(3)!=7||x.charAt(3)!=8)
-            alert("Not an indian number:Number should start with 9,8 or 7");
-            input.value="";
+        
+        if(x.charAt(3)!=9 && x.charAt(3)!=7 && x.charAt(3)!=8)
+            {
+                alert("Not an indian number:Number should start with 9,8 or 7");
+                input.value="";
+            }
     }
 
+
+
+}
+function restrict(e)
+{
+    var x=e.which;
+
+    if (x<48||x>57) return false;
 }
 
 function getstate(a)
