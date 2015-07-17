@@ -50,7 +50,7 @@
                 <table width="270" height="200" >
                         <tr><td>Name</td><td><input type="text" id="name" value=""></td></tr>
                         <tr><td>Email</td><td><input type="text" id="email" value=""></td></tr>
-                        <tr><td>PhNum</td><td><input type="text" id="phno" value="" onkeydown="check(this)" maxlength="13"></td></tr>
+                        <tr><td>PhNum</td><td><input type="text" id="phno" value="+" onkeyup="return check(this)" onkeypress="return restrict(event)" maxlength="13" ></td></tr>
                         <tr><td>Sex</td><td><input type="radio" id="sex" value="male" name="sex">Male<input type="radio" name="sex" id="sex" value="female">Female</td></tr>
                         <tr><td>Interest</td>
                         <td><input type="checkbox" name="interest" value="sports" onclick="selection(this)">Sports
