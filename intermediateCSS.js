@@ -36,8 +36,10 @@ function check(input)
         console.log(x);
         if(x!='+91')
         {
+            input.style.borderColor='red';
             alert("Not an Indian Number:Number should start with +91");
-            input.value="";
+            input.value="+";
+            input.style.borderColor='#39F';
         }
     }
     if(len==4)
@@ -45,8 +47,11 @@ function check(input)
         
         if(x.charAt(3)!=9 && x.charAt(3)!=7 && x.charAt(3)!=8)
             {
+                input.style.borderColor='red';
                 alert("Not an indian number:Number should start with 9,8 or 7");
-                input.value="";
+                input.value="+";
+                input.value="+";
+                input.style.borderColor='#39F';
             }
     }
 
