@@ -30,7 +30,7 @@ function check(input)
     console.log(len);
 
 
-    if(len==3)
+    if(len==2)
     {
         console.log(x);
         if(x!='+91')
@@ -39,7 +39,7 @@ function check(input)
             input.value="";
         }
     }
-    if(len==4)
+    if(len==3)
     {
         if(x.charAt(3)!=9||x.charAt(3)!=7||x.charAt(3)!=8)
             alert("Not an indian number:Number should start with 9,8 or 7");
