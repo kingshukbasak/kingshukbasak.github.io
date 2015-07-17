@@ -22,21 +22,28 @@ function change(x) {
     }
     
 }
-var count=0;
+
 function check(input)
 {
-    count++;
+    var len=input.value.length;
     var x=input.value;
-    if(count==3)
+    console.log(len);
+
+
+    if(len==3)
     {
         console.log(x);
-        if(x!='+91'&& x!='091')
-            alert("Not an Indian Number:Number should start with +91 or 091");
+        if(x!='+91')
+        {
+            alert("Not an Indian Number:Number should start with +91");
+            input.value="";
+        }
     }
-    if(count==4)
+    if(len==4)
     {
-        if(x.charAt(3)!=9)
+        if(x.charAt(3)!=9||x.charAt(3)!=7||x.charAt(3)!=8)
             alert("Not an indian number:Number should start with 9,8 or 7");
+            input.value="";
     }
 
 }
