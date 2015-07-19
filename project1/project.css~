@@ -1,0 +1,269 @@
+.wrapper1
+{
+	
+}
+
+.left
+ { position: fixed;
+  height: 100vh;
+  width: 30%;
+  
+  background-image: url(bg.jpg);
+}
+.right
+{
+	  
+     height: 150%;
+  width: 806px;
+  left: 386px;
+  position: relative;
+  padding: 44px;
+
+}
+
+#bigimg
+{ 
+  top: 55px;
+  left: 200px;
+  position: relative;
+  border:30px solid grey;
+  border-radius: 20px;
+  
+}
+.cover
+{
+	position: fixed;
+  background-image: url(02.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  top: 0px;
+ 	opacity: .95;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+	
+} 
+#cancel
+{ position: relative;
+  top: -398px;
+  left: 154px;
+  width: 49px;
+}
+#rights
+{ top: 540px;
+  position: absolute;
+  left: 170px;
+}
+#next
+{
+	 position: relative;
+  width: 42px;
+  top: -149px;
+  left: 106px;
+
+}
+#copyright
+{ width: 15px;
+  margin-top: 10px;
+  float: left;
+}
+#previous
+{
+	position: absolute;
+  width: 51px;
+  top: 302px;
+  left: 186px;
+}
+#myimg
+{   
+  width: 22%;
+  border-radius: 65px;
+  top: 64px;
+  left: 259px;
+  position: absolute;
+  
+}
+
+.fit
+{
+     max-width: 100%;
+  max-height: 100%;
+  padding:3px;
+}
+
+
+
+
+.div1
+{
+   width: 370px;
+  float: left;
+  height: 300px;
+  margin-right: 32px;
+}
+
+
+.social
+{
+     position: absolute;
+    top: 532px;
+  left: 172px;
+ }
+
+
+
+#twitter,#facebook,#google,#linkedin
+{
+    background-image:url(twitterg.jpg);
+    height:21px;
+    width:21px;
+    background-size: contain;
+    float:left;
+    margin:10px;
+}
+
+#twitter:hover
+{
+   background-image:url(twitter.jpg);
+}
+
+#facebook
+{
+    background-image:url(facebookg.jpg);
+}
+#facebook:hover
+{
+    background-image:url(facebook.jpg);
+}
+#linkedin
+{
+    background-image:url(linkeding.jpg);
+}
+#linkedin:hover
+{
+    background-image:url(linkedin.jpg);
+}
+#google
+{
+    background-image:url(googleg.jpg);
+}
+#google:hover
+{
+    background-image:url(google.jpg);
+}
+
+
+
+
+.buttons,.view
+{
+    background-color: white;
+  padding: 12px 30px 12px 30px;
+  margin-top: 26px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-bottom:30px;
+  color:rgb(171,171,171);
+  border-color:rgb(171,171,171);
+  border: 2px solid;
+  transition-property:border-color, color;
+ 
+  transition-duration: 1s,1s;
+  
+
+}
+input[type="button"]:hover{
+      border: 3px solid;
+  color: rgb(94,181,139);
+  border-color: rgb(94,181,139);
+  
+  padding: 11px 29px 11px 29px;
+  
+}
+.view
+{
+    position:relative;
+    visibility:hidden;
+    top: -167px;
+  left: -43px;
+    
+}
+
+
+
+.info, .address
+{
+      width: 466px;
+  margin-top: 36px;
+  float: left;
+}
+
+.address
+{
+    width:40%;
+    margin-bottom:56px;
+}
+
+input[type="text"]
+{
+    margin-bottom: 21px;
+  margin-right: 17px;
+  width: 45%;
+  height: 34px;
+   background-color:#F3F3F3;
+    border:2px solid rgb(171,171,171);
+    border-radius:3px;
+    
+}
+textarea
+{
+     background-color:#F3F3F3;
+    border:2px solid rgb(171,171,171);
+    border-radius:3px;
+}
+#recentwork
+{
+    margin-top:50px;
+}
+.lefttext
+{   position: relative;
+  text-align: right;
+  top: 151px;
+  right: 46px;
+  margin: 10px;
+  color:White;
+}
+
+.pinfo
+{
+      float: left;
+  width: 70%;
+  height: 19px;
+}
+
+.icons
+{
+    float: left;
+  width: 27px;
+  margin-top: 12px;
+  margin-right: 26px;
+}
+
+body
+{
+	margin:0px;
+	color:grey;
+	font-family:"Open Sans "
+}
+
+h4
+{
+    margin-bottom:-6px;
+}
+
+.smalltext
+{
+    font-size:11px;
+    float: left;
+    
+}
