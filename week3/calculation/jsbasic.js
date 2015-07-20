@@ -1,3 +1,4 @@
+//it is called on clicking on the add button
 function add()
 {
 	remove("add");
@@ -8,7 +9,7 @@ function add()
 	createDiv("add",i);
 	createNum("add");
 	}
-	
+//it is called on typing the result	
 function check(x)
 {	
 	var pos=x.id;
@@ -40,6 +41,7 @@ function check(x)
 		x.style.backgroundColor='red';
 	}
 }
+//it is called on clicking the substract button
 function substract()
 {
 	remove("add");
@@ -50,7 +52,7 @@ function substract()
 	createDiv("substract",i);
 	createNum("substract");
 }
-
+//it is called for clearing the previous divs
 function remove(x)
 {
 	myNode=document.getElementById(x);
@@ -60,7 +62,7 @@ function remove(x)
 	
 }
 var result={};
-
+//it is used for inintiatizing the result,num1 ans num2 array and setting the value of the number in the browser
 function createNum(x) 
 {	var num1={};
 	var num2={};
@@ -95,7 +97,7 @@ function createNum(x)
 	
 }
 
-
+//it is used for creating the divs dynamically
 function createDiv(x,i) 
 {	
 	var maindiv=document.getElementById(x);
