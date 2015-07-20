@@ -22,7 +22,7 @@ function check(x)
             x.setSelectionRange(0, 0);}
         x.focus();	
 	
-	if (x.value==result[pos]) 
+	if (x.value==result[pos] || x.value=="") 
 		{
 		x.style.border='1px solid black';
 		x.style.backgroundColor='white';
