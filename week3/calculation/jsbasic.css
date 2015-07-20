@@ -1,0 +1,38 @@
+.add
+{ 
+  background-color: yellow;
+  top: 31px;
+  width: 100%;
+  height: 100vh;
+  visibility: visible;
+  position: absolute;
+
+}
+
+.substract
+{
+	  background-color: blue;
+	  position: absolute;
+  top: 31px;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  
+}
+
+.divs
+{
+	position: relative;
+  float: left;
+  width: 65px;
+  height: 100px;
+  margin: 10px;
+}
+
+.num1, .num2, .result
+{ text-align:right; 
+	max-height: 100%;
+	max-width: 100%;
+	//direction: RTL;
+	border:1px solid black;
+}
