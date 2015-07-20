@@ -22,12 +22,17 @@ function check(x)
             x.setSelectionRange(0, 0);}
         x.focus();	
 	
-	if (x.value==result[pos] || x.value=="") 
+	if (x.value==result[pos]) 
 		{
 		x.style.border='1px solid black';
-		x.style.backgroundColor='white';
+		x.style.backgroundColor='green';
 		
-		}	
+		}
+	else if(x.value=="")
+	{
+		x.style.border='1px solid black';
+		x.style.backgroundColor='white'; 
+	}
 	else 
 	{
 		console.log(result[pos]);
