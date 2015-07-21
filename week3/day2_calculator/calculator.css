@@ -1,0 +1,25 @@
+.wrapper
+{	top: 83px;
+  left: 302px;
+  position: absolute;
+  width: 296px;
+  border: 5px solid blue;
+  padding: 20px 15px 20px 20px;
+  background-color: azure;
+}
+
+#screen
+{
+	width: 278px;
+	height: 26px;
+	border:1px solid black;
+	text-align: right;
+}
+
+.buttons
+{	
+	float: left;
+	width: 43px;
+	margin:5px 5px 5px 0px;
+}
+
