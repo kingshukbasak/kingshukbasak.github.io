@@ -41,10 +41,11 @@ function cal(x)
     var a=!(isNaN(view.value.charAt(view.value.length - 1))); //used to ensure only numbers are preceeded by operators
     var b = view.value.charAt(view.value.length - 1) == '.';    //used for allowing the input format "4.+2" or 6./9  
     var c=!(isNaN(view.value.charAt(view.value.length - 2)));//used for allowing the input format "4.+2" or 6./9
+    var e=view.value.charAt(view.value.length - 2)!="";//used for not allowing input as '.-1' in the begining as isNaN("")=true
     var d=view.value.length!=0;                              //checking if it is not the 1st character to the input
 
 	
-     if((a||(b&&c))&&d)
+     if((a||(b&&c&&e))&&d)
      {
          
          if (count == 1 && x.id == '%' && !(isNaN(view.value.charAt(view.value.length - 1))))
