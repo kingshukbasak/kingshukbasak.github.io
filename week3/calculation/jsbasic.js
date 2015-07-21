@@ -15,13 +15,9 @@ function check(x)
 	var pos=x.id;
 	var val=x.value;
 	
-	if (x.createTextRange) {
-            var part = x.createTextRange();
-            part.move("character", 0);
-            part.select();
-        }else if (x.setSelectionRange){
+	
             x.setSelectionRange(0, 0);}
-        x.focus();	
+      	
 	
 	if (x.value==result[pos]) 
 		{
