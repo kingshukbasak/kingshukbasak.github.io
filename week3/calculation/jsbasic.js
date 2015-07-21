@@ -16,8 +16,8 @@ function check(x)
 	var val=x.value;
 	
 	
-            x.setSelectionRange(0, 0);}
-      	
+     x.setSelectionRange(0, 0);
+        	
 	
 	if (x.value==result[pos]) 
 		{
