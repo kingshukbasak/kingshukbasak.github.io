@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="date_calculator.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="wrapper">
+		<p >Enter two dates to get the difference:</p>
+		<div class="innerdiv1">
+			<input type="date" class="calender" id="date1">
+			<input type="date" class="calender" id="date2">
+		</div>
+		<div>
+		<p class="label">Date 1:</p>
+		<input type="text box" placeholder="DD" class="dates" id="dd1" disabled>
+		<input type="text box" placeholder="MM" class="dates" id="mm1" disabled>
+		<input type="text box" placeholder="YYYY" class="dates" id="yyyy1" disabled>
+		<p class="label">Date 2:</p>
+		<input type="text box" placeholder="DD" class="dates" id="dd2" disabled>
+		<input type="text box" placeholder="MM" class="dates" id="mm2" disabled>
+		<input type="text box" placeholder="YYYY" class="dates" id="yyyy2" disabled>
+		<p class="label">Diff:</p>
+		<span title="DAYS"><input type="text box" placeholder="DD" class="dates" id="rdd" disabled></span>
+		<span title="MONTHS"><input type="text box" placeholder="MM" class="dates" id="rmm" disabled></span>
+		<span title="YEARS"><input type="text box" placeholder="YYYY" class="dates" id="ryyyy" disabled></span>
+		<p class="label">Days:</p>
+		<span title="TOTAL DAYS"><input type="text box" placeholder="Days" class="dates" id="days" disabled></span>
+		<input type="button" value="Calculate" class="cal" id="cal1" onclick="datediff()">
+		</div>
+			
+	</div>
+	
+	<div class="wrapper">
+		<p >Enter two time to get the difference:</p>
+		
+		<p class="label">Time 1:</p>
+		<input type="text box" placeholder="HH" class="dates" id="hh1">
+		<input type="text box" placeholder="MIN" class="dates" id="min1">
+		<input type="radio" id="am1"  name="time1" class="radio"><p class="dates">AM</p>
+      <input type="radio" id="pm1"  name="time1" class="radio"><p class="dates">PM</p>
+      
+		<p class="label">Time 2:</p>
+		<input type="text box" placeholder="HH" class="dates" id="hh2">
+		<input type="text box" placeholder="MIN" class="dates" id="min2">
+		<input type="radio" id="am2"  name="time2" class="radio"><p class="dates">AM</p>
+      <input type="radio" id="pm2"  name="time2" class="radio"><p class="dates">PM</p>
+		
+		
+		<p class="label">Diff:</p>
+		<span title="HOURS"><input type="text box" placeholder="HH" class="dates" id="hours" disabled></span>
+		<span title="MINUTES"><input type="text box" placeholder="MIN" class="dates" id="minutes" disabled></span>
+		<input type="button" value="Calculate" class="cal" id="cal2" onclick="timediff()">
+		
+			
+	</div>
+	
+	<div class="wrapper">
+		<p >Enter a time/date and an interval :</p>
+		<div class="innerdiv1">
+			<input type="date" class="calender" id="intervaldate">
+			
+		</div>		
+		<p class="label">Time:</p>
+		<input type="text box" placeholder="HH" class="dates" id="hh">
+		<input type="text box" placeholder="MIN" class="dates" id="min">
+		<input type="radio" id="am"  name="time3" class="radio"><p class="dates">AM</p>
+      <input type="radio" id="pm"  name="time3" class="radio"><p class="dates">PM</p>
+      
+		<p class="label">Date:</p>
+		<input type="text box" placeholder="DD" class="dates" id="dd" disabled>
+		<input type="text box" placeholder="MM" class="dates" id="mm" disabled>
+		<input type="text box" placeholder="YYYY" class="dates" id="yyyy" disabled>
+		
+		<p class="label">Interval:</p>
+		<input type="text box" placeholder="MIN" class="dates" id="intervalmin">
+		<input type="text box" placeholder="HH" class="dates" id="intervalhh">
+		<input type="text box" placeholder="DD" class="dates" id="intervaldd">
+		<input type="text box" placeholder="MM" class="dates" id="intervalmm">
+		<input type="text box" placeholder="YYYY" class="dates" id="intervalyyyy">
+		
+		
+		<p class="label">Output:</p>
+		
+        <span title="MINUTES"><input type="text box" placeholder="MIN" class="dates" id="rintervalmin" disabled></span>
+	    <span title="HOURS(24hours)"><input type="text box" placeholder="HH" class="dates" id="rintervalhh" disabled></span>
+        <span title="DAY"><input type="text box" placeholder="DD" class="dates" id="rintervaldd" disabled></span>
+        <span title="MONTH"><input type="text box" placeholder="MM" class="dates" id="rintervalmm" disabled></span>
+        <span title="YEAR"><input type="text box" placeholder="YYYY" class="dates" id="rintervalyyyy" disabled></span>
+		<input type="button" value="Calculate" class="cal" id="cal3" onclick="interval()">
+		
+			
+	</div>
+</body>
+<script src="date_calculator.js" type="text/javascript" >
+
+</script>
+</html>
