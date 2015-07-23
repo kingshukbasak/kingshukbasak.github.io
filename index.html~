@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="project.css" rel="stylesheet" type="text/css">
+<link href="project1/project.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="wrapper1">
@@ -102,6 +102,6 @@
 <img src="previous.png" id="previous" onclick="previousimg(event)">
 </div>
 </div>
-<script src="project.js"></script>
+<script src="project1/project.js"></script>
 </body>
 </html>
