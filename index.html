@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="project1/project.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="wrapper1">
+<div class="left">
+
+<img src="1.jpg" id='myimg' class="fit">
+<p class="lefttext"><b>I am Kingshuk</b></p><p class="lefttext">Your designation here</p><p class="lefttext">crafted by FusionCharts</p>
+<div class="social">
+    
+    <div id='twitter'></div>
+    <div id='facebook'></div>
+    <div id='linkedin'></div>
+    <div id='google'></div>
+</div>
+	<div id="rights"><img src="copyright.png" id="copyright"> <p class="smalltext">Untitled | Design:Fusion Charts</p></div>
+
+</div>
+<div class="right">
+       <h2>You can check your Daily Projects in this page. The page gives a graphical representation of the day to day work</h2>
+        <div>Given below are 6 projects done so far. First five are real and the sixth one is a dummy project. Against each project
+	there is a heading describing the project and a subheading stating the day on which it was done. clicking on the image
+	opens a bigger image from which snapshots of other projects can be navigated.</div>
+        <input type="button" value="Learn More" class="buttons" >
+
+        ___________________________________________________________________________________________________________
+        <h3 id="recentwork">Recent Work</h3>
+<div>
+    <div class="div1">
+        <img src="work1.jpg" class="fit" id="img1" onmouseover="showbutton(b1,this)" onmouseout="hidebutton(b1)" >
+        <h4>2nd page created using CSS</h4>
+        <p class="smalltext">I built it on the 7th day of my joining</p>
+        <input type="button" value="View" class="view" onmouseover="showbutton(b1)" id='b1' onclick="enlarge()">
+    </div>
+    <div class="div1">
+        <img src="work2.jpg" class="fit" onmouseover="showbutton(b2,this)" onmouseout="hidebutton(b2)">
+        <h4>1st page created using CSS</h4>
+        <p class="smalltext">I built it on the 5th day of my joining</p>
+        <input type="button" value="View" class="view" onmouseover="showbutton(b2)" id='b2' onclick="enlarge()">
+    </div>
+    <div class="div1">
+        <img src="work3.jpg" class="fit" onmouseover="showbutton(b3,this)" onmouseout="hidebutton(b3)">
+        <h4>Registration form created using table</h4>
+        <p class="smalltext">I built it on the 4th day of my joining</p>
+          <input type="button" value="View" class="view" id="b3" onmouseover="showbutton(b3)" onclick="enlarge()">
+    </div>
+    <div class="div1">
+        <img src="work4.jpg" class="fit" onmouseover="showbutton(b4,this)" onmouseout="hidebutton(b4)">
+        <h4>Registration form created without using table</h4>
+        <p class="smalltext">I built it on the 4th day of my joining</p>
+          <input type="button" value="View" class="view" id="b4" onmouseover="showbutton(b4)" onclick="enlarge()">
+    </div>
+    <div class="div1">
+        <img src="work5.jpg" class="fit" onmouseover="showbutton(b5,this)" onmouseout="hidebutton(b5)">
+        <h4>The page gives information about my GitHub Repo</h4>
+        <p class="smalltext">I used it on the 3rd day of my joining</p>
+          <input type="button" value="View" class="view" onmouseover="showbutton(b5)" id='b5' onclick="enlarge()">
+    </div>
+    <div class="div1">
+        <img src="work6.jpg" class="fit" onmouseover="showbutton(b6,this)" onmouseout="hidebutton(b6)">
+        <h4>1st chart created using Fusion Charts library </h4>
+        <p class="smalltext">I built it on the 1st day of my joining</p>
+          <input type="button" value="View" class="view" onmouseover="showbutton(b6)" id="b6" onclick="enlarge()">
+    </div>
+</div>
+    <input type="button" value="Full PortFolio" class="buttons" >
+
+    ___________________________________________________________________________________________________________
+
+    <p>Get In Touch</p>
+    <div>
+		If you have any queries regarding my projects, feel free to get in touch by sending a message with a valid email id.    
+    
+    </div>
+    <div>
+        <div class="info">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email" onkeyup="validate(this)">
+            <textarea rows=7 cols=53 placeholder="Message" spellcheck="true"></textarea>
+        </div>
+        <div class="address">
+            
+                <img src="home.png" class="icons">
+                <p class="pinfo">Bg-138/1 Hanapa Kestopur Kolkata-700102</p>
+                <img src="mobile.png" class="icons">
+                <p class="pinfo">9883614917</p>
+                <img src="email.png" class="icons">
+                <p class="pinfo">kingshukbasak@gmail.com</p>
+        
+        </div>
+           
+      </div>
+        <input type="button" value="Send Message" class="buttons" >
+</div>
+<div class="cover" id="cover" onclick="hideimg()" >
+<img src="" id="bigimg" onclick="stopevent(event)">
+<img src="exit.png" id="cancel" onclick="hideimg()">
+<img src="next.png" id="next" onclick="nextimg(event)">
+<img src="previous.png" id="previous" onclick="previousimg(event)">
+</div>
+</div>
+<script src="project1/project.js"></script>
+</body>
+</html>
