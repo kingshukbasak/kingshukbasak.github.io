@@ -1,0 +1,34 @@
+.wrapper
+{
+	 width: 185px;
+  height: 147px;
+  top: 58px;
+  left: 222px;
+  position: absolute;
+  border: 2px solid aqua;
+  padding: 10px 0px 0px 10px;
+
+}
+
+.inputinfo
+{	
+	float: left;
+	width: 77px;
+	text-align: right;
+	margin-bottom: 3px;
+	
+	
+}
+
+.label
+{
+	float: left;
+	margin:0px;
+	width: 74px;
+}
+
+#cal
+{
+	margin-left: 20px;
+	  margin-top: 10px;
+}
