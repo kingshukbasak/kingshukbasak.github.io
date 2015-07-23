@@ -42,14 +42,17 @@ function timediff()
 	
 	
 	
-	   if(document.getElementById("pm1").checked) 
+	   if(document.getElementById("pm1").checked && Number(hh1) != 12) 
 		hh1=Number(hh1)+12;
+		else if (document.getElementById("am1").checked && Number(hh1) == 12)
+ 	    hh1 = 0;
 		
 	
 	
-	 if(document.getElementById("pm2").checked) 
+	 if(document.getElementById("pm2").checked && Number(hh2) != 12) 
 		hh2=Number(hh2)+12;
-			
+		else if (document.getElementById("am2").checked && Number(hh2) == 12)
+ 	    hh2s = 0;	
 		
 		
 		min1=Number(min1)+Number(hh1)*60;
