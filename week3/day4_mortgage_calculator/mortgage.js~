@@ -9,7 +9,7 @@ function cal()
 	if(loan=="")
 	{
 		var r=Math.pow((1+rate/1200),months);
-		loan= Math.random((emi*r-emi)/(r*rate/1200));
+		loan= Math.round((emi*r-emi)/(r*rate/1200));
 		document.getElementById("loan").value=loan;
 	}
 	else if(emi=="")
