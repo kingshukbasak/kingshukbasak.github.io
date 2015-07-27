@@ -44,7 +44,7 @@ var arr=["work1.jpg","work2.jpg","work3.jpg","work4.jpg","work5.jpg","work6.jpg"
 function nextimg(x) 
 {
 	var imgmatch=img.src; 
-	if(count==0)
+	if(count===0)
 	{
 		count=1;
 	i=0;
@@ -62,7 +62,7 @@ function previousimg(x)
 {
 	var imgmatch=img.src; 
 	
-	if(count==0)
+	if(count===0)
 	{
 		count=1;
 	i=0;
@@ -70,7 +70,7 @@ function previousimg(x)
 		if(imgmatch.search(arr[i])!=-1)
 			break;
 	 }
-	 if(i==0) i=6;
+	 if(i===0) i=6;
 	document.getElementById("bigimg").src=arr[--i%6];
 	x.stopPropagation();
 	
@@ -80,7 +80,7 @@ function validate(x)
 	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
 	if(x.value.match(mailformat))
 	x.style.borderColor="rgb(171,171,171)";
-	else if (x.value=="")
+	else if (x.value==="")
 	 x.style.borderColor="rgb(171,171,171)";
 	else 
 	x.style.borderColor="red";

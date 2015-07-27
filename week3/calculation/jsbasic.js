@@ -25,7 +25,7 @@ function check(x)
 		x.style.backgroundColor='green';
 		
 		}
-	else if(x.value=="")
+	else if(x.value==="")
 	{
 		x.style.border='1px solid black';
 		x.style.backgroundColor='white'; 
@@ -101,16 +101,17 @@ function createDiv(x,i)
 	innerDiv.className = 'divs';
 	innerDiv.id='divs';
 	maindiv.appendChild(innerDiv);
-	
-	var input = document.createElement('input');
+
+	var input;
+	input = document.createElement('input');
    input.type = "text";
    input.name = "num1";
-   input.className="num1"
+   input.className="num1";
    input.disabled='true';
    
    innerDiv.appendChild(input);
    
-   var input = document.createElement('input');
+    input = document.createElement('input');
    input.type = "text";
    input.name = "num2";
    input.className="num2";
@@ -118,7 +119,7 @@ function createDiv(x,i)
    
    innerDiv.appendChild(input);
    
-   var input = document.createElement('input');
+   input = document.createElement('input');
    input.type = "text";
    input.name = "result";
    input.className="result";

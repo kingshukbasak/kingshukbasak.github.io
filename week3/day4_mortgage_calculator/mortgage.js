@@ -6,19 +6,19 @@ function cal()
 	rate=document.getElementById("rate").value;
 	emi=document.getElementById("emi").value;
 	var r=Math.pow((1+rate/1200),months);
-	if(loan=="")
+	if(loan==="")
 	{
 		
 		loan= Math.round((emi*r-emi)/(r*rate/1200));
 		document.getElementById("loan").value=loan;
 	}
-	else if(emi=="")
+	else if(emi==="")
 	{
 		
 		emi=Math.round((loan*r*rate/1200)/(r-1));
 		document.getElementById("emi").value=emi;
 	}
-	else if(months=="")
+	else if(months==="")
 	{
 		var c=emi-loan*rate/1200;
 		var a=Math.log(emi/c);

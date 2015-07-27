@@ -11,7 +11,7 @@ function disp(x)
     
 	var view=document.getElementById("screen");
 	var val = view.value;
-	if (x.value != '.' || ((x.value == '.') && dot == 0))// if dot counter is set then decimal has already been used,so it cant be used again.
+	if (x.value != '.' || ((x.value === '.') && dot === 0))// if dot counter is set then decimal has already been used,so it cant be used again.
      {
          if (x.value == '.') dot = 1;
 	    val = val + x.value;
@@ -41,8 +41,8 @@ function cal(x)
     var a=!(isNaN(view.value.charAt(view.value.length - 1))); //used to ensure only Numbers are preceeded by operators
     var b = view.value.charAt(view.value.length - 1) == '.';    //used for allowing the input format "4.+2" or 6./9  
     var c=!(isNaN(view.value.charAt(view.value.length - 2)));//used for allowing the input format "4.+2" or 6./9
-    var e=view.value.charAt(view.value.length - 2)!="";//used for not allowing input as '.-1' in the begining as isNaN("")=true
-    var d=view.value.length!=0;                              //checking if it is not the 1st character to the input
+    var e=view.value.charAt(view.value.length - 2) !=="";//used for not allowing input as '.-1' in the begining as isNaN("")=true
+    var d=view.value.length!==0;                              //checking if it is not the 1st character to the input
 	 var f = view.value.charAt(view.value.length - 1) == 'D'; 
 	 var g = view.value.charAt(view.value.length - 2) == '.';
      if((a||(b&&c&&e))&&d)
@@ -54,7 +54,7 @@ function cal(x)
       
       
 
-          if (count == 0 && x.id != '%' ) 
+          if (count ===  0 && x.id != '%' ) 
           {
               num1 = view.value;
               view.value = view.value + x.id;
@@ -64,7 +64,7 @@ function cal(x)
            }
 
       }
-    else if(view.value.length==0 && val=='-') // used to input a negative parseFloat in the begining
+    else if(view.value.length===0 && val=='-') // used to input a negative parseFloat in the begining
     {
         view.value='-';
     }
@@ -79,7 +79,7 @@ function cal(x)
  {
  	var val=x.id;
  	
-    var screen=document.getElementById("screen").value
+    var screen=document.getElementById("screen").value;
     var num;
     if (isNaN(screen)) //if the value to be stored is not a parseFloat
     {
@@ -122,7 +122,7 @@ function result()
 	var view=document.getElementById("screen");
 	var sign = view.value.charAt(num1len);
 	var modulusCheck = view.value.charAt(view.value.length - 1);
-	var result ="";
+	var result1 ="";
 	var num2 = NaN;
 	if (modulusCheck == '%' && sign != 'M') //steps to evaluate percentage
     {
@@ -133,7 +133,7 @@ function result()
     {
          num2 = view.value.substring(num1.length + 3, view.value.length - 1);
         num2 = parseFloat(num1) * parseFloat(num2) / 100;
-        result = (parseFloat(num1) % parseFloat(num2));
+        result1 = (parseFloat(num1) % parseFloat(num2));
         clear = 1;
         view.value = result;
         return result;
@@ -141,21 +141,21 @@ function result()
 	else
 	    num2 = view.value.substring(num1.length + 1);
 	
-	 if (num2 == "")
+	 if (num2 === "")
 	     num2 = NaN;
          //general + = * / and modulus functions.
 	if(sign=='+')
-	result=(parseFloat(num1)+parseFloat(num2));
+	result1=(parseFloat(num1)+parseFloat(num2));
 	else if(sign=='-')
-	result=(parseFloat(num1)-parseFloat(num2));
+	result1=(parseFloat(num1)-parseFloat(num2));
 	else if(sign=='/')
-	result=(parseFloat(num1)/parseFloat(num2));
+	result1=(parseFloat(num1)/parseFloat(num2));
 	else if(sign=='*')
-	result=(parseFloat(num1)*parseFloat(num2));
+	result1=(parseFloat(num1)*parseFloat(num2));
 	else if(sign=='M' && modulusCheck!='%')
 	{
-		var num2=view.value.substring( num1.length+3);
-		result=(parseFloat(num1)%parseFloat(num2));
+		 num2=view.value.substring( num1.length+3);
+		result1=(parseFloat(num1)%parseFloat(num2));
 	}
 clear = 1;
 

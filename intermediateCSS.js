@@ -69,11 +69,11 @@ function getstate(a)
 {
    
    
-   var country=a.value;
+   var country=a.value,st;
     if(country=="india")
-            var st=["Madhya Pradesh","Bihar","Odisa","West Bengal","Delhi","Maharastra","Assam","Tripura"];
+             st=["Madhya Pradesh","Bihar","Odisa","West Bengal","Delhi","Maharastra","Assam","Tripura"];
     else if(country=="usa")
-            var st=["California","Alabama","Alaska","Colorado","Hawaii","Florida","Los Angelos"];
+             st=["California","Alabama","Alaska","Colorado","Hawaii","Florida","Los Angelos"];
     var state=document.getElementById("states");
     state.disabled=false;
     var len=state.options.length;
@@ -104,7 +104,7 @@ function fetch() {
         }
     }
     var inputElements = document.getElementsByName('interest');
-    for (var i = 0; inputElements[i]; ++i) {
+    for ( i= 0; inputElements[i]; ++i) {
         if (inputElements[i].checked) {
             interest = interest + inputElements[i].value + ",";
         }
