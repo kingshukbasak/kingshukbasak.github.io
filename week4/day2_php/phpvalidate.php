@@ -2,17 +2,22 @@
 // define variables and set to empty values
 
     session_start();
-    
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $_SESSION["name"]=$_SESSION["phnum"]=$_SESSION["email"]=$_SESSION["country"]=$_SESSION["state"]=$_SESSION["address"]=$_SESSION["interest"]=$_SESSION["sex"]="";
+    $_SESSION["stateErr"]=$_SESSION["nameErr"]=$_SESSION["addressErr"]=$_SESSION["emailErr"]=$_SESSION["phnumErr"]=$_SESSION["interestErr"]=$_SESSION["countryErr"]=$_SESSION["sexErr"]="";
+    $_SESSION["phpHit"]="set";
+    $flag=0;
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
    if (empty($_POST["name"])) {
      $nameErr = "Name_is_required";
      $_SESSION["nameErr"]= $nameErr;
+     $flag=1;
     } else {
      $_SESSION["name"] = test_input($_POST["name"]);
    }
    if (empty($_POST["email"])) {
      $emailErr = "Email_is_required";
      $_SESSION["emailErr"]= $emailErr;
+     $flag=1;
     } else {
       
      $_SESSION["email"] = test_input($_POST["email"]);
@@ -20,21 +25,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          {
           $emailErr = "Email_is_incorrect";
           $_SESSION["emailErr"]= $emailErr;
-          echo "email error";
+          $flag=1;
         }
    }
    if (empty($_POST["phnum"])) {
      $phnumErr = "PhNum_is_required";
      $_SESSION["phnumErr"]= $phnumErr;
+     $flag=1;
     } else {
      $_SESSION["phnum"] = test_input($_POST["phnum"]);
      if(strlen($_POST["phnum"])!=10)
-         $phnumErr = "PhNum_is_incorrect";
+     {$phnumErr = "PhNum_is_incorrect";
         $_SESSION["phnumErr"]= $phnumErr;
+        $flag=1;
+     }
    }
    if (empty($_POST["sex"])) {
      $sexErr = "Sex_is_required";
      $_SESSION["sexErr"]= $sexErr;
+     $flag=1;
     } else {  
               $_SESSION["sex"]=test_input($_POST["sex"]);
               if($_POST["sex"]=='male')
@@ -45,26 +54,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    if (empty($_POST["interest"])) {
      $interestErr = "Interest_is_required";
      $_SESSION["interestErr"]= $interestErr;
+     $flag=1;
     } else {
      $_SESSION["interest"] = test_input($_POST["interest"]);
    }
    if (empty($_POST["country"])) {
      $countryErr = "Country_is_required";
      $_SESSION["countryErr"]= $countryErr;
+     $flag=1;
     } else {
      $_SESSION["country"] = test_input($_POST["country"]);
    }
    if (empty($_POST["address"])) {
      $addressErr = "Address_is_required";
      $_SESSION["addressErr"]= $addressErr;
+     $flag=1;
     } else {
      $_SESSION["address"]= test_input($_POST["address"]);
    }
    
+   if (empty($_POST["states"])) {
+     $stateErr = "State_is_required";
+     $_SESSION["stateErr"]= $stateErr;
+     $flag=1;
+    } else {
+     $_SESSION["state"]= test_input($_POST["states"]);
+   }
+   
+   
+   
 }
 
+if($flag==0)
+{
   unlink('data.csv');
-   $csvdata="name:".$_SESSION["name"].",phone_number:".$_SESSION["phnum"].",email:".$_SESSION["email"].",country:".$_SESSION["country"].",state:".$_SESSION["state"].",address:".$_SESSION["address"].",interest:".$_SESSION["interest"].",sex:".$_SESSION["sex"];
+  $csvdata="name:".$_SESSION["name"].",email:".$_SESSION["email"].",phone_number:".$_SESSION["phnum"].",sex:".$_SESSION["sex"].",interest:".$_SESSION["interest"].",country:".$_SESSION["country"].",state:".$_SESSION["state"].",address:".$_SESSION["address"];
   $fp = fopen("data.csv","a"); 
   if($fp)
   {
@@ -72,6 +96,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         fclose($fp); 
         
   }
+  $_SESSION["success"]="success";
+  $_SESSION["name"]=$_SESSION["phnum"]=$_SESSION["email"]=$_SESSION["country"]=$_SESSION["state"]=$_SESSION["address"]=$_SESSION["interest"]="";
+  unset($_SESSION["sexMale"]); unset($_SESSION["sexFemale"]);
+}
 
 function test_input($data) {
    $data = trim($data);

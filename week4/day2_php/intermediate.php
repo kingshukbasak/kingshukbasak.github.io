@@ -7,8 +7,9 @@
     <title></title>
 </head>
 
-<body <?php if(isset($_SESSION["nameErr"])) echo "onload=change('tab2')"?>>
+<body <?php if(isset($_SESSION["phpHit"])) echo "onload=change('tab2')"?>>
   <div style="position:absolute; top:50px; left:80px;">
+      
 
     <div>
         <ul>
@@ -58,9 +59,9 @@
                         <tr><td>Sex</td><td><input type="radio" id="sex" value="male" name="sex" <?php if(isset($_SESSION["sexMale"])) echo "checked"?>>Male<input type="radio" name="sex" id="sex" value="female" <?php if(isset($_SESSION["sexFemale"])) echo "checked"?>>Female
                         <span><?php if(isset($_SESSION["sexErr"]))echo $_SESSION["sexErr"];?></span></td></tr>
                         <tr><td>Interest</td>
-                        <td><input type="checkbox" name="interest" value="sports" onclick="selection(this)">Sports
-                        <input type="checkbox" name="interest" value="movie" onclick="selection(this)">Movie
-                        <input type="checkbox" name="interest" value="reading" onclick="selection(this)">Reading
+                        <td><input type="checkbox" name="interest" value="sports" onclick="">Sports
+                        <input type="checkbox" name="interest" value="movie" onclick="">Movie
+                        <input type="checkbox" name="interest" value="reading" onclick="">Reading
                         <span><?php if(isset($_SESSION["interestErr"]))echo $_SESSION["interestErr"];?></span></td></tr>
                 </table>
             </div>
@@ -75,9 +76,10 @@
                                             </select>
                                             <span><?php if(isset($_SESSION["countryErr"]))echo $_SESSION["countryErr"];?></span><span></td></tr>
 
-                        <tr><td>State</td><td><select id="states" name="states" value="" disabled>
+                        <tr><td>State</td><td><select id="states" name="states" value="" disabled name="states">
                                              
-                                            </select></td></tr>
+                                            </select>
+                            <span><?php if(isset($_SESSION["state"]))echo $_SESSION["stateErr"];?></span></td></tr>
                         <tr><td>Address</td><td><textarea rows='10' id="address" name="address"><?php if(isset($_SESSION["address"]))echo $_SESSION["address"];?></textarea >
                         <span><?php if(isset($_SESSION["addressErr"]))echo $_SESSION["addressErr"];?></span></td></tr>
                 </table>
@@ -125,6 +127,7 @@
                 
     </div>
   </div>
+    <p style="color:red; font-size:20px; left:350px; position:relative"><?php if(isset($_SESSION["success"])) echo "Successfully Submitted"?></p>
   <script src="intermediateCSS.js">
     
 </script>
