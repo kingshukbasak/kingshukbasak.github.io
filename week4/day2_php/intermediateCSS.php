@@ -1,3 +1,4 @@
+<?php session_start() ?>
 function change(x) {
     var a = document.getElementById("tab1");
     var b = document.getElementById("tab2");
@@ -86,6 +87,7 @@ function getstate(a)
         var option = document.createElement('option');
         option.value = st[i];
         option.label=st[i];
+        option.selected= <?php if((isset($_SESSION["state"]))&&($_SESSION["state"]==st[i]))echo "selected='selected'";?>
         state.add(option);
     }
 

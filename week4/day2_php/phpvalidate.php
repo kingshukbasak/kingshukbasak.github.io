@@ -45,18 +45,20 @@
      $_SESSION["sexErr"]= $sexErr;
      $flag=1;
     } else {  
-              $_SESSION["sex"]=test_input($_POST["sex"]);
+              $_SESSION["sex"]=($_POST["sex"]);
               if($_POST["sex"]=='male')
-                $_SESSION["sexMale"] = test_input($_POST["sex"]); 
+                $_SESSION["sexMale"] = ($_POST["sex"]); 
               else if($_POST["sex"]=='female')
-                $_SESSION["sexFemale"] = test_input($_POST["sex"]); 
+                $_SESSION["sexFemale"] =($_POST["sex"]); 
    }
    if (empty($_POST["interest"])) {
      $interestErr = "Interest_is_required";
      $_SESSION["interestErr"]= $interestErr;
      $flag=1;
     } else {
-     $_SESSION["interest"] = test_input($_POST["interest"]);
+        foreach($_POST['interest'] as $check) 
+            $_SESSION["interest"].= $check;
+            
    }
    if (empty($_POST["country"])) {
      $countryErr = "Country_is_required";
@@ -70,7 +72,7 @@
      $_SESSION["addressErr"]= $addressErr;
      $flag=1;
     } else {
-     $_SESSION["address"]= test_input($_POST["address"]);
+     $_SESSION["address"]= ($_POST["address"]);
    }
    
    if (empty($_POST["states"])) {
@@ -78,7 +80,7 @@
      $_SESSION["stateErr"]= $stateErr;
      $flag=1;
     } else {
-     $_SESSION["state"]= test_input($_POST["states"]);
+     $_SESSION["state"]= ($_POST["states"]);
    }
    
    

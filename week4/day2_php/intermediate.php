@@ -59,9 +59,9 @@
                         <tr><td>Sex</td><td><input type="radio" id="sex" value="male" name="sex" <?php if(isset($_SESSION["sexMale"])) echo "checked"?>>Male<input type="radio" name="sex" id="sex" value="female" <?php if(isset($_SESSION["sexFemale"])) echo "checked"?>>Female
                         <span><?php if(isset($_SESSION["sexErr"]))echo $_SESSION["sexErr"];?></span></td></tr>
                         <tr><td>Interest</td>
-                        <td><input type="checkbox" name="interest" value="sports" onclick="">Sports
-                        <input type="checkbox" name="interest" value="movie" onclick="">Movie
-                        <input type="checkbox" name="interest" value="reading" onclick="">Reading
+                        <td><input type="checkbox" name="interest[]" value="sports" onclick="" <?php if((isset($_SESSION["interest"]))&&(strpos($_SESSION["interest"],'sports') !== false))echo "checked";?>>Sports
+                        <input type="checkbox" name="interest[]" value="movie" onclick="" <?php if((isset($_SESSION["interest"]))&&(strpos($_SESSION["interest"],'movie') !== false))echo "checked";?>>Movie
+                        <input type="checkbox" name="interest[]" value="reading" onclick="" <?php if((isset($_SESSION["interest"]))&&(strpos($_SESSION["interest"],'reading') !== false))echo "checked";?>>Reading
                         <span><?php if(isset($_SESSION["interestErr"]))echo $_SESSION["interestErr"];?></span></td></tr>
                 </table>
             </div>
@@ -71,12 +71,12 @@
                         
                         <tr><td>Country</td><td><select id="country" name="country" onchange="getstate(this)">
                                               <option disabled selected></option>
-                                              <option value="india">India</option>
-                                              <option value="usa">USA</option>
+                                              <option value="india" <?php if((isset($_SESSION["country"]))&&($_SESSION["country"]=='india'))echo "selected='selected'";?>>India</option>
+                                              <option value="usa" <?php if((isset($_SESSION["country"]))&&($_SESSION["country"]=='usa'))echo "selected='selected'";?>>USA</option>
                                             </select>
                                             <span><?php if(isset($_SESSION["countryErr"]))echo $_SESSION["countryErr"];?></span><span></td></tr>
 
-                        <tr><td>State</td><td><select id="states" name="states" value="" disabled name="states">
+                        <tr><td>State</td><td><select id="states" name="states" value="" name="states" disabled>
                                              
                                             </select>
                             <span><?php if(isset($_SESSION["state"]))echo $_SESSION["stateErr"];?></span></td></tr>
@@ -128,7 +128,7 @@
     </div>
   </div>
     <p style="color:red; font-size:20px; left:350px; position:relative"><?php if(isset($_SESSION["success"])) echo "Successfully Submitted"?></p>
-  <script src="intermediateCSS.js">
+  <script src="intermediateCSS.php">
     
 </script>
 </body>
