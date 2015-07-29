@@ -1,5 +1,6 @@
-<?php session_start() ?>
-function change(x) {
+
+
+function change(x,y) {
     var a = document.getElementById("tab1");
     var b = document.getElementById("tab2");
     if (x == 'tab1') {
@@ -22,6 +23,7 @@ function change(x) {
         b.style.borderBottom = '1px solid #E4F0FE ';
     }
     
+    getstate(y);
 }
 
 function check(input)
@@ -66,11 +68,14 @@ function restrict(e)
     if (x<48||x>57) return false;
 }
 
-function getstate(a)
+
+function getstate(b)
 {
    
-   
-   var country=a.value,st;
+   var a=document.getElementById("country");
+   var country=a.value; var st;
+    if(country!=="")
+    {
     if(country=="india")
              st=["Madhya Pradesh","Bihar","Odisa","West Bengal","Delhi","Maharastra","Assam","Tripura"];
     else if(country=="usa")
@@ -86,10 +91,12 @@ function getstate(a)
         
         var option = document.createElement('option');
         option.value = st[i];
-        option.label=st[i];
-        option.selected= <?php if((isset($_SESSION["state"]))&&($_SESSION["state"]==st[i]))echo "selected='selected'";?>
+        option.innerHTML=st[i];
+        if(b==option.value)
+        option.selected="selected";
         state.add(option);
     }
+}
 
     
 
@@ -153,3 +160,4 @@ function hide() {
     document.getElementById(x).style.visibility = 'hidden';
     
 }
+

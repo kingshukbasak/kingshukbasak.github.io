@@ -57,7 +57,7 @@
      $flag=1;
     } else {
         foreach($_POST['interest'] as $check) 
-            $_SESSION["interest"].= $check;
+            $_SESSION["interest"].= $check."\t";
             
    }
    if (empty($_POST["country"])) {
@@ -110,5 +110,5 @@ function test_input($data) {
    return $data;
 }
 
- header("Location:intermediate.php");
+ header("Location:index.php");
 ?>

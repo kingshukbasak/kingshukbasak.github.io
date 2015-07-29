@@ -7,7 +7,7 @@
     <title></title>
 </head>
 
-<body <?php if(isset($_SESSION["phpHit"])) echo "onload=change('tab2')"?>>
+<body <?php if(isset($_SESSION["phpHit"])) echo "onload=change('tab2'"; if((isset($_SESSION["state"]))) echo ",'".$_SESSION["state"]."')"; else echo ",null)"?>>
   <div style="position:absolute; top:50px; left:80px;">
       
 
@@ -69,7 +69,7 @@
                 
                 <table width="270" height="170" >
                         
-                        <tr><td>Country</td><td><select id="country" name="country" onchange="getstate(this)">
+                        <tr><td>Country</td><td><select id="country" name="country" onchange="getstate(<?php if((isset($_SESSION["state"]))) echo "'".$_SESSION["state"]."'"; else echo "null"?>)">
                                               <option disabled selected></option>
                                               <option value="india" <?php if((isset($_SESSION["country"]))&&($_SESSION["country"]=='india'))echo "selected='selected'";?>>India</option>
                                               <option value="usa" <?php if((isset($_SESSION["country"]))&&($_SESSION["country"]=='usa'))echo "selected='selected'";?>>USA</option>
@@ -128,7 +128,7 @@
     </div>
   </div>
     <p style="color:red; font-size:20px; left:350px; position:relative"><?php if(isset($_SESSION["success"])) echo "Successfully Submitted"?></p>
-  <script src="intermediateCSS.php">
+  <script src="intermediateCSS.js">
     
 </script>
 </body>
