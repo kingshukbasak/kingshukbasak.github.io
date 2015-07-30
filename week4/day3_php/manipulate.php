@@ -18,7 +18,7 @@ $conn = new mysqli("localhost", "root", "", "formData");
  {
      
 
-        $sql = "Delete from interest where email='$email'"; echo $sql;
+        $sql = "Delete from interest where email='$email'"; echo $sql; echo $sql;
         $conn->query($sql);
         $sql = "Delete from primaryTable where email='$email'";
         $conn->query($sql);
