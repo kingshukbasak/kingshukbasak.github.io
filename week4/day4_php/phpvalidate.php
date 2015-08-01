@@ -71,15 +71,15 @@ if($flag==0)
 {
     
   $csvdata="name:".$_POST["name"].",email:".$_POST["email"].",phone_number:".$_POST["phnum"].",sex:".$_POST["sex"].",interest:".$_POST["interest"].",country:".$_POST["country"].",state:".$_POST["states"].",address:".$_POST["address"].PHP_EOL;
-  $fp = fopen("datanew.csv","a"); 
+  $fp = fopen("data.csv","a"); 
   if($fp)
   {
     fwrite($fp,$csvdata); 
         fclose($fp); 
         
   }
-  
-  echo '{"status":"SUCCESSFULLY SUBMITTED"}';
+  $output='{"nameErr":"'.$nameErr.'","phnumErr":"'.$phnumErr.'","emailErr":"'.$emailErr.'","sexErr":"'.$sexErr.'","interestErr":"'.$interestErr.'","countryErr":"'.$countryErr.'","stateErr":"'.$stateErr.'","addressErr":"'.$addressErr.'","status":"SUCCESSFULLY SUBMITTED"}';
+  echo $output;
 }
 
 

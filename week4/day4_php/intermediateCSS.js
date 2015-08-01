@@ -190,7 +190,6 @@ function subscribe() {
     
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            console.log(xmlhttp.responseText);
             var obj = JSON.parse(xmlhttp.responseText);
             for (var i in obj) 
                 document.getElementById(i).innerHTML =obj[i];
