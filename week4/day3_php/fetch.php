@@ -23,7 +23,7 @@ if ($result->num_rows > 0)
     	$sql1 = "SELECT interest FROM interest where email='$email'";
     	$result1=$conn->query($sql1);
         echo "<form method='post' action='manipulate.php'>";
-        echo "<table border=1><tr><td><input type='text' name='name' value=".$row["name"]."></td><td><input type='text' name='email'  value=".$row["email"]." readonly=readonly></td><td><input type='text' name='phnum'  value=".$row["phnum"]."></td><td><input type='text' name='sex' value=".$row["sex"]."></td>";
+        echo "<table border=1><tr><td><input type='text' name='name' value='".$row["name"]."'></td><td><input type='text' name='email'  value='".$row["email"]."' readonly=readonly></td><td><input type='text' name='phnum'  value='".$row["phnum"]."'></td><td><input type='text' name='sex' value='".$row["sex"]."'></td>";
         while($row1= $result1->fetch_assoc())
         {
             $count++;
@@ -32,7 +32,7 @@ if ($result->num_rows > 0)
         }
 //        for($i=$count;$i<3;$i++)
 //            echo "<td><input type='text' name='".$i."'value='-'</td>";
-        echo"<td><input type='text' name='country' value=".$row["country"]."></td><td><input type='text' name='state' value=".$row["state"]."></td><td><input type='text' name='address' value=".$row["address"]."></td>";
+        echo"<td><input type='text' name='country' value='".$row["country"]."'></td><td><input type='text' name='state' value='".$row["state"]."'></td><td><input type='text' name='address' value='".$row["address"]."'></td>";
         echo "<td><button type='submit' name='edit' value='edit' >EDIT</button></td><td><button type='submit' name='delete' value='delete' >DELETE</button></td></tr></table></form>";
     }
     //echo "</table></form>";
