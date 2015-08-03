@@ -95,7 +95,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) 
 {
     //creaing the html dynamically
-    echo "<table border=1 ><tr><th width='138px'>NAME</th><th width='172px'>EMAIL</th><th width='89px'>PHNUM</th><th width='61px'>SEX</th><th width='102px'>INTEREST1</th><th width='103px'>INTEREST2</th><th width='104px'>INTEREST3</th><th width='138px'>COUNTRY</th><th width='139px'>STATE</th><th width='134px'>ADDRESS</th></tr></table>";
+    echo "<table border=1 ><tr><th width='138px'>NAME</th><th width='167px'>EMAIL</th><th width='76px'>PHNUM</th><th width='48px'>SEX</th><th width='94px'>INTEREST1</th><th width='94px'>INTEREST2</th><th width='94px'>INTEREST3</th><th width='128px'>COUNTRY</th><th width='139px'>STATE</th><th width='124px'>ADDRESS</th></tr></table>";
     //traversing each row of the result set
     while($row = $result->fetch_assoc()) 
     {       
@@ -106,7 +106,7 @@ if ($result->num_rows > 0)
     	$sql1 = "SELECT interest FROM interest where email='$email'";
     	$result1=$conn->query($sql1);
         echo "<form method='post' id=".$count.">";
-        echo "<table border=1 onkeypress='changecolor(this)'><tr><td><input type='text' name='name' size='15px' value='".$row["name"]."'></td><td><input type='text' name='email' size='20px'  value='".$row["email"]."' readonly=readonly></td><td><input type='text' name='phnum' size='8px'  value='".$row["phnum"]."'></td><td><input type='text' name='sex' size='4px' value='".$row["sex"]."'></td>";       
+        echo "<table border=2 onkeydown='changecolor(this)'><tr><td><input type='text' name='name' size='15px' value='".$row["name"]."'></td><td><input type='text' name='email' size='20px'  value='".$row["email"]."' readonly=readonly></td><td><input type='text' name='phnum' size='8px'  value='".$row["phnum"]."'></td><td><input type='text' name='sex' size='4px' value='".$row["sex"]."'></td>";       
         while($row1= $result1->fetch_assoc())
         {
             $count++;
