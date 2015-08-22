@@ -418,8 +418,8 @@
             num2 = parseFloat(num1) * parseFloat(num2) / 100;
             result1 = (parseFloat(num1) % parseFloat(num2));
             clear = 1;
-            view.value = result;
-            return result;
+            view.value = result1;
+            return result1;
         }
         else
             num2 = view.value.substring(num1.length + 1);
@@ -441,8 +441,8 @@
         }
         clear = 1;
 
-        view.value = result;
-        return result;
+        view.value = result1;
+        return result1;
 
     }
 
